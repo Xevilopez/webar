@@ -22,11 +22,56 @@
                     }.bind(this));
                 },
             });
-            
-        <button id="record-button">Start Recording</button>
-        <video id="recorded-video" autoplay></video>
-            
         </script>
+        
+        
+        
+<button id="record-button">Start Recording</button>
+<video id="recorded-video"></video>
+
+<script>
+  // Get references to the button and video elements
+  const recordButton = document.getElementById("record-button");
+  const recordedVideo = document.getElementById("recorded-video");
+
+  // Create a MediaRecorder object
+  let mediaRecorder;
+
+  // Get access to the camera
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+      // Attach the video stream to the video element
+      recordedVideo.srcObject = stream;
+
+      // Create a new MediaRecorder object and start recording
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.ondataavailable = handleDataAvailable;
+
+      // Handle the record button click event
+      recordButton.addEventListener("click", function() {
+        if (recordButton.textContent === "Start Recording") {
+          mediaRecorder.start();
+          recordButton.textContent = "Stop Recording";
+        } else {
+          mediaRecorder.stop();
+          recordButton.textContent = "Start Recording";
+        }
+      });
+    })
+    .catch(function(err) {
+      console.log("The following error occurred: " + err.name);
+    });
+
+  // Handle the dataavailable event and create a URL for the video
+  function handleDataAvailable(e) {
+    if (e.data.size > 0) {
+      const url = URL.createObjectURL(e.data);
+      recordedVideo.src = url;
+    }
+  }
+</script>      
+        
+        
     </head>
     
     <body style="margin: 0; overflow: hidden;">        
