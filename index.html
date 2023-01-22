@@ -28,7 +28,6 @@
     
     <body style="margin: 0; overflow: hidden;">        
         <a-scene
-            <button id="recording-button" onclick="startRecording()">Start Recording</button>
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
             arjs='sourceType: webcam; debugUIEnabled: false;'
@@ -36,6 +35,7 @@
             embedded
             gesture-detector
         >
+                        <button id="recording-button" onclick="startRecording()">Start Recording</button>
             <a-assets>
                 <video
                     id="vid"
