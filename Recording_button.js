@@ -49,3 +49,9 @@ function saveRecording() {
     }, 100);
   };
 }
+
+// Button shape change from play to pause:
+
+$(".button").click(function() {
+  $(this).toggleClass("active");
+});
