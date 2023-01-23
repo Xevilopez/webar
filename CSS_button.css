@@ -1,12 +1,12 @@
   .button {
     margin: 100px auto 0;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border: 6px solid #fff;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top: 75%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%)
   }
@@ -29,6 +29,6 @@
     margin: 100px auto 0;
     cursor: pointer;
     position: absolute;
-    top: 71.5%;
+    top: 61.5%;
     right: 12.5%;
   }
