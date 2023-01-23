@@ -2,7 +2,6 @@
 <html>
     <head>
 	<link rel="stylesheet" href="CSS_button.css">
-	<script type = "text/javascript" src="Recording_button.js"></script>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
@@ -26,13 +25,17 @@
             });
         </script>
         
-	<div class="button">
-		<div class="inner"></div>
-	</div>
-	    
-	<div style='position: fixed; bottom: 10px; width:100%; text-align: right; z-index: 1;'>
-	<button id="save-button" onclick="saveRecording()" disabled>Save Recording</button>
-	</div>
+<!-- Recording button-->
+<div class="button">
+  <div class="inner"></div>
+</div>
+
+<!-- Saving button-->
+<div style='position: fixed; bottom: 10px; width:100%; text-align: right; z-index: 1;'>
+<button id="save-button" onclick="saveRecording()" disabled>Save Recording</button>
+</div>
+
+<script src="Recording_button.js"></script>
 	    
     </head>
     
