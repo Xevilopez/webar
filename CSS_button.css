@@ -6,7 +6,7 @@
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top: 65%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%)
   }
@@ -29,6 +29,6 @@
     margin: 100px auto 0;
     cursor: pointer;
     position: absolute;
-    top: 61.5%;
+    top: 65%;
     right: 12.5%;
   }
