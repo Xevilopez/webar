@@ -8,8 +8,7 @@
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-  	<title>HTML 5 Boilerplate</title>
-  	<link rel="stylesheet" href="style.css">	    
+  	<title>HTML 5 Boilerplate</title>	    
 	
 	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -33,20 +32,19 @@
                 },
             });
         </script>
-        
-<!-- Recording button-->
-<div class="button">
-	<div class="inner"></div>
-</div>
-
-<!-- Saving button-->
-<div class="button2">
-	<button style= "border: 0; background: transparent;" id="save-button" onclick="saveRecording()" disabled><input type="image" src="download logo.png" height="50"></button>
-</div>
 	    
     </head>
     
-    <body style="margin: 0; overflow: hidden;">        
+    <body style="margin: 0; overflow: hidden;">
+	
+	<div class="button">
+    		<div class="inner"></div>
+  	</div>
+
+	<div class="button2">
+	    <button style= "border: 0; background: transparent;" id="save-button" onclick="saveRecording()" disabled><input type="image" src="download logo.png" height="50"></button>
+	</div>    
+	    
         <a-scene
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
