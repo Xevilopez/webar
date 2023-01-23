@@ -6,6 +6,10 @@
     border: 10px solid #fff;
     border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%)
   }
   
   .inner {
