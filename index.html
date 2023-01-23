@@ -88,21 +88,17 @@
         </a-scene>
         
 	<!-- REC button -->
-	<div class="button">
+	<div class="button" id="record-button">
     		<div class="inner"></div>
   	</div>
 
-	<!-- Save button 
-	<div class="button2">
-		<button style= "border: 0; background: transparent;" id="save-button" onclick="saveRecording()" disabled><input type="image" src="download logo.png" height="40"></button>
-	</div>  
-	-->
-	<!--Toggle functionality (morph effect) for recording button-->
 	<script>
 	  $(".button").click(function() {
 	  $(this).toggleClass("active");
 	});
 	</script>
+	    
+	<script type="text/javascript" src="Recording_button.js"></script>
 	    
     </body>
 </html>
