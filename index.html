@@ -1,8 +1,17 @@
 <!doctype html>
 <html>
     <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!--CDN: (Content Delivery Network) instead of hosting locally the toggle functionality -->
+        
 	<link rel="stylesheet" href="CSS_button.css">
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	    
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<title>HTML 5 Boilerplate</title>
+  	<link rel="stylesheet" href="style.css">	    
+	
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
@@ -34,8 +43,6 @@
 <div style='position: fixed; bottom: 10px; width:100%; text-align: right; z-index: 1;'>
 <button id="save-button" onclick="saveRecording()" disabled>Save Recording</button>
 </div>
-
-<script src="Recording_button.js"></script>
 	    
     </head>
     
@@ -90,5 +97,12 @@
             <a-entity camera></a-entity>
         </a-scene>
         
+	<!--Toggle functionality (morph effect) for recording button-->
+	<script>
+	  $(".button").click(function() {
+	  $(this).toggleClass("active");
+	});
+	</script>
+	    
     </body>
 </html>
