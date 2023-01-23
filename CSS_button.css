@@ -25,3 +25,11 @@
     transform: scale(0.5);
     border-radius: 12%;
   }
+
+  .button2 {
+    margin: 100px auto 0;
+    cursor: pointer;
+    position: absolute;
+    top: 71.5%;
+    right: 12.5%;
+  }
