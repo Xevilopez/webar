@@ -18,7 +18,7 @@ recordButton.addEventListener('click', () => {
         // Create a new MediaStreamRecording object
             const mediaStreamRecording = new MediaStreamRecording(stream);
                 // Use the saveToFile method to save the video to a file
-                mediaStreamRecording.saveToFile('recorded-video.mp4').then(file => {
+                mediaStreamRecording.saveToFile('recorded-video.mp4'); /*.then(file => {
                   // Use the PHPhotoLibrary class to save the video to the Photos app
                   const photoLibrary = new photoLibrary();
                   photoLibrary.writeImageDataToSavedPhotosAlbum(file, 'video/mp4', (error) => {
@@ -28,7 +28,7 @@ recordButton.addEventListener('click', () => {
                           console.log('Video saved successfully to Photos app');
                       }
                   });
-              });
+              });*/
           };  
       }
     )
