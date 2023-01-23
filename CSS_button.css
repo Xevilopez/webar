@@ -18,7 +18,6 @@
     border-radius: 50%;
     transition: all 0.2s ease;
     transform: scale(0.94);
-    text-align: center;
   }
   
   .button.active .inner {
