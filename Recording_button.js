@@ -2,7 +2,7 @@ const recordButton = document.getElementById('record-button');
 recordButton.addEventListener('click', () => {
     navigator.mediaDevices.getUserMedia({
         audio: true,
-        video: true
+        video: { facingMode: 'environment' }
     })
     .then(stream => {
       // Start recording
@@ -15,10 +15,23 @@ recordButton.addEventListener('click', () => {
     mediaRecorder.ondataavailable = e => {
       const recordedBlob = e.data;
       // Save the recorded video file
-      const mediaStreamRecording = new MediaStreamRecording(stream);
-      mediaStreamRecording.saveToFile('recorded-video.mp4');
+        // Create a new MediaStreamRecording object
+            const mediaStreamRecording = new MediaStreamRecording(stream);
+                // Use the saveToFile method to save the video to a file
+                mediaStreamRecording.saveToFile('recorded-video.mp4').then(file => {
+                  // Use the PHPhotoLibrary class to save the video to the Photos app
+                  const photoLibrary = new PHPhotoLibrary();
+                  photoLibrary.writeImageDataToSavedPhotosAlbum(file, 'video/mp4', (error) => {
+                      if (error) {
+                          console.error('Error saving video to Photos app:', error);
+                      } else {
+                          console.log('Video saved successfully to Photos app');
+                      }
+                  });
+              });
+          };  
       }
-    })
+    )
     .catch(error => {
         console.error('Error:', error);
     });
