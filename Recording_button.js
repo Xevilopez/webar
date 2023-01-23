@@ -20,7 +20,7 @@ recordButton.addEventListener('click', () => {
                 // Use the saveToFile method to save the video to a file
                 mediaStreamRecording.saveToFile('recorded-video.mp4').then(file => {
                   // Use the PHPhotoLibrary class to save the video to the Photos app
-                  const photoLibrary = new PHPhotoLibrary();
+                  const photoLibrary = new photoLibrary();
                   photoLibrary.writeImageDataToSavedPhotosAlbum(file, 'video/mp4', (error) => {
                       if (error) {
                           console.error('Error saving video to Photos app:', error);
