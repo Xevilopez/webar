@@ -36,15 +36,7 @@
     </head>
     
     <body style="margin: 0; overflow: hidden;">
-	
-	<div class="button">
-    		<div class="inner"></div>
-  	</div>
-
-	<div class="button2">
-	    <button style= "border: 0; background: transparent;" id="save-button" onclick="saveRecording()" disabled><input type="image" src="download logo.png" height="40"></button>
-	</div>    
-	    
+	 
         <a-scene
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
@@ -95,6 +87,16 @@
             <a-entity camera></a-entity>
         </a-scene>
         
+	<!-- REC button -->
+	<div class="button">
+    		<div class="inner"></div>
+  	</div>
+
+	<!-- Save button 
+	<div class="button2">
+		<button style= "border: 0; background: transparent;" id="save-button" onclick="saveRecording()" disabled><input type="image" src="download logo.png" height="40"></button>
+	</div>  
+	-->
 	<!--Toggle functionality (morph effect) for recording button-->
 	<script>
 	  $(".button").click(function() {
