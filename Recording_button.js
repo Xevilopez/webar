@@ -2,7 +2,7 @@ const recordButton = document.getElementById('record-button');
 recordButton.addEventListener('click', () => {
     navigator.mediaDevices.getUserMedia({
         audio: true,
-        video: true
+        video: { facingMode: 'environment' }
     })
     .then(stream => {
         // code to start recording and saving the video file goes here
